@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!--stylsheets-->
+    <!--stylesheets-->
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
@@ -19,9 +19,13 @@
 
     <!--own scripts-->
   </head>
-  <body>
 
+  <body>
+  <nav>
+    <a class="btn btn-primary" routerLink="/login" routerLinkActive="active">Login</a>
+    <a class="btn btn-secondary" routerLink="/inventory" routerLinkActive="active">Inventory</a>
+  </nav>
+
+  <router-outlet></router-outlet>
   </body>
 </html>
-
-

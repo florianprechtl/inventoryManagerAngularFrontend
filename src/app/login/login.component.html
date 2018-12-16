@@ -1,3 +1,23 @@
-<p>
-  login works!
-</p>
+<!-- Login form -->
+<div class="login-container container-fluid">
+  <div class="row">
+    <div class="col-sm-12 input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Username</span>
+      </div>
+      <input type="text" class="form-control" name="username" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Password</span>
+      </div>
+      <input type="password" class="form-control" name="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+    </div>
+  </div>
+  <button class="btn full-width margin-bottom button-login" type="submit" name="submit">Login</button>
+  <div class="padding-bottom">
+    <a class="btn btn-info" role="button" data-toggle="modal" data-target="#exampleModalCenter">First time on our site? Click here!</a>
+  </div>
+</div>
