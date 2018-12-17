@@ -1,6 +1,20 @@
 <!-- Login form -->
 <form (submit)="loginUser($event)">
-  <input type="text" placeholder="username" id="username">
-  <input type="password" placeholder="password" id="password">
-  <input type="submit" value="login">
+
+  <!-- Username -->
+  <div class="input-group mb-3 mt-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="username">Default</span>
+    </div>
+    <input type="text" class="form-control">
+  </div>
+
+  <!-- Password -->
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Default</span>
+    </div>
+    <input type="text" class="form-control">
+  </div>
+
 </form>
