@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 @Injectable()
 export class AuthService {
 
-    @Output() onAuthChange: EventEmitter<any> = new EventEmitter();
+    @Output() authChange: EventEmitter<any> = new EventEmitter();
 
     private _authenticated = false;
     private _user;
@@ -59,7 +59,7 @@ export class AuthService {
     }
 
     public emitAuthentification(value: boolean) {
-        this.onAuthChange.emit(value);
+        this.authChange.emit(value);
     }
 
     redirect(path: string) {

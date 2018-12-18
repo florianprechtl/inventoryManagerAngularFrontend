@@ -20,7 +20,7 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
       this.auth.onAuthChange.subscribe((res) => {
           this.logoutHidden = !res;
-      })
+      });
       this.router.events.subscribe((event) => {
           if (event instanceof NavigationEnd) {
               this.deactivateAllNavs();
