@@ -18,7 +18,7 @@ export class NavigationComponent implements OnInit {
   constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit() {
-      this.auth.onAuthChange.subscribe((res) => {
+      this.auth.authChange.subscribe((res) => {
           this.logoutHidden = !res;
       });
       this.router.events.subscribe((event) => {
