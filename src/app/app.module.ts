@@ -8,7 +8,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {InventoryComponent} from './inventory/inventory.component';
 import {HttpClientModule} from '@angular/common/http';
 import {AuthService} from './login/auth.service';
-import {AdminComponent} from './admin/admin/admin.component';
+import {AdminComponent} from './admin/admin.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
