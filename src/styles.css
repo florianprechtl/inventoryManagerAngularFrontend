@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+.background-1 {
+    background-color: #F22E00 !important;
+}
+
+.background-2 {
+    background-color: #FF643F !important;
+}
+
+.background-3 {
+    background-color: #FFD8CF !important;
+}
+
+.background-4 {
+    background-color: #FFFFFF !important;
+}
+
+.color-1 {
+    color: #F22E00 !important;
+}
+
+.color-2 {
+    color: #FF643F !important;
+}
+
+.color-3 {
+    color: #FFD8CF !important;
+}
+
+.color-4 {
+    color: #FFFFFF !important;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 3;
+}
+
+.header, .header h1{
+    width: 100%;
+    line-height: 2 !important;
+}

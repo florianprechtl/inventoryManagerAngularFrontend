@@ -10,11 +10,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {AuthService} from './login/auth.service';
 import {AdminComponent} from './admin/admin/admin.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'inventory', component: InventoryComponent},
-    {path: 'admin', component: AdminComponent}
+    {path: 'admin', component: AdminComponent},
+    {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
@@ -24,14 +27,16 @@ const appRoutes: Routes = [
         MyModalComponent,
         InventoryComponent,
         AdminComponent,
-        HeaderComponent
+        HeaderComponent,
+        HomeComponent,
+        NavigationComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
         RouterModule.forRoot(
             appRoutes,
-            {enableTracing: true} // <-- debugging purposes only
+            {enableTracing: false} // <-- debugging purposes only
         )
     ],
     providers: [AuthService],

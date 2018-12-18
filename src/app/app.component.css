@@ -5,6 +5,10 @@ html, body {
 }
 
 body {
-    background: url("../assets/imgs/fridge_inside.png") no-repeat fixed;
+    /* background: url("../assets/imgs/fridge_inside.png") no-repeat fixed; */
     background-size: cover;
+}
+
+h1{
+    background-color: green;
 }
