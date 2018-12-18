@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
+import {AuthService} from '../login/auth.service';
 
 @Component({
   selector: 'app-navigation',
@@ -12,10 +13,14 @@ export class NavigationComponent implements OnInit {
     public loginActive = false;
     public inventoryActive = false;
     public adminActive = false;
+    public logoutHidden = true;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit() {
+      this.auth.onAuthChange.subscribe((res) => {
+          this.logoutHidden = !res;
+      })
       this.router.events.subscribe((event) => {
           if (event instanceof NavigationEnd) {
               this.deactivateAllNavs();
@@ -43,6 +48,11 @@ export class NavigationComponent implements OnInit {
       this.inventoryActive = false;
       this.adminActive = false;
   }
+
+  public logout() {
+      this.auth.logout();
+  }
+
 
 
 }
