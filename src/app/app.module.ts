@@ -11,7 +11,8 @@ import {AuthService} from './login/auth.service';
 import {AdminComponent} from './admin/admin.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { NavigationDesktopComponent } from './navigation/navigation-desktop/navigation-desktop.component';
+import { NavigationMobileComponent } from './navigation/navigation-mobile/navigation-mobile.component';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
         AdminComponent,
         HeaderComponent,
         HomeComponent,
-        NavigationComponent
+        NavigationDesktopComponent,
+        NavigationMobileComponent
     ],
     imports: [
         BrowserModule,

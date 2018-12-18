@@ -39,4 +39,5 @@
 .header, .header h1{
     width: 100%;
     line-height: 2 !important;
+    font-size: 23px;
 }
