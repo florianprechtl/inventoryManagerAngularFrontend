@@ -12,3 +12,9 @@ body {
 h1{
     background-color: green;
 }
+
+#navigationPanel {
+    border-right: #F22E00 solid 5px;
+    border-bottom: #F22E00 solid 5px;
+    height: 100%;
+}
