@@ -1,22 +1,51 @@
-<div class="container-fluid mt-4">
-    <div class="row justify-content-between">
-        <div class="col col-lg-4">
-            <label for="inventory_select">Search for entry:</label>
-            <div class="input-group mb-3">
-                <select class="form-control" id="inventory_select">
+<div class="row justify-content-between mt-3">
+    <!-- Left side - inventory select -->
+    <div class="col-lg-5 col-sm-6 ">
+        <div class="form-group">
+            <label for="inventorySelect">Select Inventory:</label>
+
+
+            <div class="input-group">
+
+                <select class="form-control" name="inventory" id="inventorySelect">
 
                 </select>
+
+                <div class="input-group-btn">
+                    <div class="btn-group search-button" role="group">
+                        <button type="button" class="btn button-search" data-toggle='modal'
+                                data-target='#add_inventory_modal'><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="col col-lg-4">
-            <label for="search_bar_inventory">Search for entry:</label>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="search_bar_inventory">
-            </div>
-        </div>
-
     </div>
 
+    <!-- Right side - search bar -->
+    <div class="col-lg-5 col-sm-6">
+        <label for="search_entry">Search for specific entries:</label>
+        <div class="input-group">
+            <input type="text" class="form-control" name="search_entry" id="search_entry"
+                   placeholder="Search for ..."/>
+            <div class="input-group-btn">
+                <div class="btn-group search-button" role="group">
+                    <button type="submit" name="search" id="search_button" class="btn button-search" value="search">
+                        <i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<app-my-modal modalId="test">Test</app-my-modal>
+
+<!-- Inventory entries showcase -->
+<div class="d-flex justify-content-around flex-wrap bd-highlight mb-3">
+    <div class="inventory-item-preview icon-box add-inventory-entry-button" data-toggle="modal" data-target="#myModal">
+        <button><i class="fas fa-plus add-entry-icon"></i></button>
+    </div>
+
+    <app-my-modal modalId="myModal"></app-my-modal>
+
+    <div class='inventory-item-preview' data-toggle='modal' data-target='#info_modal_test' id='inventory_item_preview_test'>
+    <i class='btn btn-danger button-remove' id='button_remove_test'>X</i>
+    </div>
+</div>

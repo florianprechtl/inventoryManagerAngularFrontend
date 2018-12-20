@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationDesktopComponent } from './navigation/navigation-desktop/navigation-desktop.component';
 import { NavigationMobileComponent } from './navigation/navigation-mobile/navigation-mobile.component';
+import { InventoryShowCaseComponent } from './inventory/inventory-show-case/inventory-show-case.component';
+import { InventoryTopBarComponent } from './inventory/inventory-top-bar/inventory-top-bar.component';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
@@ -31,7 +33,9 @@ const appRoutes: Routes = [
         HeaderComponent,
         HomeComponent,
         NavigationDesktopComponent,
-        NavigationMobileComponent
+        NavigationMobileComponent,
+        InventoryShowCaseComponent,
+        InventoryTopBarComponent
     ],
     imports: [
         BrowserModule,
