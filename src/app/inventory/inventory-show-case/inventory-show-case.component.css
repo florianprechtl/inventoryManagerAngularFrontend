@@ -1,0 +1,65 @@
+.inventory-item-preview {
+    margin: 15px;
+    background-color: #B1C7F5;
+    border-radius: 5px;
+    min-height: 140px;
+    min-width: 140px;
+    box-shadow: black 0px 0px 5px 0px;
+    background-size: cover;
+}
+
+.inventory-info-item-preview {
+    margin: auto;
+    margin-top: 33px;
+    margin-bottom: 16px;
+    background-color: #B1C7F5;
+    border-radius: 5px;
+    height: 202.76px;
+    width: 202.76px;
+    box-shadow: black 0px 0px 2px 0px;
+    background-size: cover;
+}
+
+.inventory-item-preview:hover {
+    box-shadow: inset black 0px 0px 5px 0px;
+}
+
+.add-inventory-entry-button {
+    background-color: #031D54;
+    color: #B1C7F5;
+    transition: 0.2s ;
+}
+
+.add-inventory-entry-button:hover {
+    background-color: #B1C7F5;
+    color: #031D54;
+}
+
+.icon-box {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    margin-right: 1em;
+    background-color: #031D54;
+    text-align: center;
+}
+
+.icon-box:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.icon-box a {
+    color: white;
+    font-size: 2em;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icon-container div:last-child {
+    margin-right: 0;
+}

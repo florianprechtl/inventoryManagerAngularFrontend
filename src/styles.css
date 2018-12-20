@@ -50,3 +50,16 @@
     line-height: 2 !important;
     font-size: 23px;
 }
+
+.button-search {
+    background-color: #031D54;
+    color: #B1C7F5;
+    height: 38px;
+    transition: 0.2s;
+}
+
+.button-search:hover {
+    background-color: #B1C7F5;
+    color: #031D54;
+    height: 38px;
+}
