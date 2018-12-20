@@ -15,6 +15,7 @@ import { NavigationDesktopComponent } from './navigation/navigation-desktop/navi
 import { NavigationMobileComponent } from './navigation/navigation-mobile/navigation-mobile.component';
 import { InventoryShowCaseComponent } from './inventory/inventory-show-case/inventory-show-case.component';
 import { InventoryTopBarComponent } from './inventory/inventory-top-bar/inventory-top-bar.component';
+import { InventoryEntryPanelComponent } from './inventory/inventory-show-case/inventory-entry-panel/inventory-entry-panel.component';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
         NavigationDesktopComponent,
         NavigationMobileComponent,
         InventoryShowCaseComponent,
-        InventoryTopBarComponent
+        InventoryTopBarComponent,
+        InventoryEntryPanelComponent
     ],
     imports: [
         BrowserModule,
