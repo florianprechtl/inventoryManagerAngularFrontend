@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
@@ -10,11 +10,26 @@ export class InventoryShowCaseComponent implements OnInit {
 
     public inventoryentries;
 
+    private _currentInventory;
+
+    @Input()
+    set currentInventory(value: number) {
+        this._currentInventory = value;
+        this.loadInventory(value);
+    }
+    get currentInventory(): number {
+        return this._currentInventory;
+    }
+
+
     constructor(private http: HttpClient) {
     }
 
     ngOnInit() {
-        this.http.get('http://localhost:8080/projects/RESTAPI/inventoryentry').subscribe((res) => {
+    }
+
+    loadInventory(inventoryNr: number) {
+        this.http.get('http://localhost:8080/projects/RESTAPI/currentinventoryentry/' + inventoryNr).subscribe((res) => {
             console.log(res);
             this.inventoryentries = res;
         });
