@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-inventory-top-bar',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory-top-bar.component.css']
 })
 export class InventoryTopBarComponent implements OnInit {
+
+  @Input()
+  public inventories;
 
   constructor() { }
 

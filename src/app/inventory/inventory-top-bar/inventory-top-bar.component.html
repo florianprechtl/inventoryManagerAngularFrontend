@@ -1,38 +1,38 @@
 <div class="row justify-content-between mt-3">
-  <!-- Left side - inventory select -->
-  <div class="col-lg-5 col-sm-6 ">
-    <div class="form-group">
-      <label for="inventorySelect">Select Inventory:</label>
+    <!-- Left side - inventory select -->
+    <div class="col-lg-5 col-sm-6 ">
+        <div class="form-group">
+            <label for="inventorySelect">Select Inventory:</label>
 
 
-      <div class="input-group">
+            <div class="input-group">
 
-        <select class="form-control" name="inventory" id="inventorySelect">
+                <select class="form-control" name="inventory" id="inventorySelect">
+                    <option *ngFor="let inventory of inventories">{{inventory.Name}}</option>
+                </select>
 
-        </select>
-
-        <div class="input-group-btn">
-          <div class="btn-group search-button" role="group">
-            <button type="button" class="btn button-search" data-toggle='modal'
-                    data-target='#add_inventory_modal'><i class="fas fa-plus"></i></button>
-          </div>
+                <div class="input-group-btn">
+                    <div class="btn-group search-button" role="group">
+                        <button type="button" class="btn button-search" data-toggle='modal'
+                                data-target='#add_inventory_modal'><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Right side - search bar -->
-  <div class="col-lg-5 col-sm-6">
-    <label for="search_entry">Search for specific entries:</label>
-    <div class="input-group">
-      <input type="text" class="form-control" name="search_entry" id="search_entry"
-             placeholder="Search for ..."/>
-      <div class="input-group-btn">
-        <div class="btn-group search-button" role="group">
-          <button type="submit" name="search" id="search_button" class="btn button-search" value="search">
-            <i class="fas fa-search"></i></button>
+    <!-- Right side - search bar -->
+    <div class="col-lg-5 col-sm-6">
+        <label for="search_entry">Search for specific entries:</label>
+        <div class="input-group">
+            <input type="text" class="form-control" name="search_entry" id="search_entry"
+                   placeholder="Search for ..."/>
+            <div class="input-group-btn">
+                <div class="btn-group search-button" role="group">
+                    <button type="submit" name="search" id="search_button" class="btn button-search" value="search">
+                        <i class="fas fa-search"></i></button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

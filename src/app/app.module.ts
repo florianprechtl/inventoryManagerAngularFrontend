@@ -7,7 +7,7 @@ import {MyModalComponent} from './common/my-modal/my-modal.component';
 import {RouterModule, Routes} from '@angular/router';
 import {InventoryComponent} from './inventory/inventory.component';
 import {HttpClientModule} from '@angular/common/http';
-import {AuthService} from './login/auth.service';
+import {AuthService} from './services/auth.service';
 import {AdminComponent} from './admin/admin.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +16,7 @@ import { NavigationMobileComponent } from './navigation/navigation-mobile/naviga
 import { InventoryShowCaseComponent } from './inventory/inventory-show-case/inventory-show-case.component';
 import { InventoryTopBarComponent } from './inventory/inventory-top-bar/inventory-top-bar.component';
 import { InventoryEntryPanelComponent } from './inventory/inventory-show-case/inventory-entry-panel/inventory-entry-panel.component';
+import {DataService} from './services/data.service';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
@@ -47,7 +48,7 @@ const appRoutes: Routes = [
             {enableTracing: false} // <-- debugging purposes only
         )
     ],
-    providers: [AuthService],
+    providers: [AuthService, DataService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

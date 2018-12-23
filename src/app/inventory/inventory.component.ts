@@ -1,17 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from '../services/data.service';
 
 @Component({
-  selector: 'app-inventory',
-  templateUrl: './inventory.component.html',
-  styleUrls: ['./inventory.component.css']
+    selector: 'app-inventory',
+    templateUrl: './inventory.component.html',
+    styleUrls: ['./inventory.component.css']
 })
 export class InventoryComponent implements OnInit {
 
-  public currentInventory = 3;
+    public currentInventory;
+    public inventories;
 
-  constructor() { }
+    constructor(private dataService: DataService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.dataService.getAllInventories().subscribe((res) => {
+            this.inventories = res;
+            if (this.inventories.length > 0) {
+                this.currentInventory = this.inventories[0].InventoryNr;
+            } else {
+                this.currentInventory = null;
+            }
+        });
+    }
 
 }

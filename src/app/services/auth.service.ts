@@ -1,5 +1,5 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 
 @Injectable()
@@ -11,11 +11,10 @@ export class AuthService {
     private _user;
 
 
-
-
     get authenticated() {
         return this._authenticated;
     }
+
     set authenticated(value: boolean) {
         this._authenticated = value;
         this.emitAuthentification(value);
@@ -24,11 +23,13 @@ export class AuthService {
     get user() {
         return this._user;
     }
+
     set user(value) {
         this._user = value;
     }
 
-    constructor(private http: HttpClient, private router: Router) { }
+    constructor(private http: HttpClient, private router: Router) {
+    }
 
     public login(username, password) {
         this.http.get('http://localhost:8080/projects/RESTAPI/login/' + username + '/' + password).subscribe((res) => {
