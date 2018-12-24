@@ -9,7 +9,7 @@ import {Inventory} from '../classes/inventory.class';
 })
 export class InventoryComponent implements OnInit {
 
-    public currentInventory;
+    public currentInventoryNr: number;
     public inventories: Inventory[];
 
     constructor(private dataService: DataService) {
@@ -19,15 +19,15 @@ export class InventoryComponent implements OnInit {
         this.dataService.getAllInventories().subscribe((res: Inventory[]) => {
             this.inventories = res;
             if (this.inventories.length > 0) {
-                this.currentInventory = this.inventories[0].InventoryNr;
+                this.currentInventoryNr = this.inventories[0].InventoryNr;
             } else {
-                this.currentInventory = null;
+                this.currentInventoryNr = null;
             }
         });
     }
 
     onInventorySelect(inventoryNr: number) {
-        this.currentInventory = inventoryNr;
+        this.currentInventoryNr = inventoryNr;
     }
 
 }

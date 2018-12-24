@@ -10,17 +10,17 @@ export class InventoryShowCaseComponent implements OnInit {
 
     public inventoryentries;
 
-    private _currentInventory;
+    private _currentInventoryNr;
 
     @Input()
-    set currentInventory(value: number) {
+    set currentInventoryNr(value: number) {
         if (value) {
-            this._currentInventory = value;
+            this._currentInventoryNr = value;
             this.loadInventory(value);
         }
     }
     get currentInventory(): number {
-        return this._currentInventory;
+        return this._currentInventoryNr;
     }
 
 

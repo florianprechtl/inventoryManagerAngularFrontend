@@ -1,6 +1,7 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {User} from '../classes/user.class';
 
 @Injectable()
 export class AuthService {
@@ -8,7 +9,7 @@ export class AuthService {
     @Output() authChange: EventEmitter<any> = new EventEmitter();
 
     private _authenticated = false;
-    private _user;
+    private _user: User;
 
 
     get authenticated() {
@@ -20,11 +21,11 @@ export class AuthService {
         this.emitAuthentification(value);
     }
 
-    get user() {
+    get user(): User {
         return this._user;
     }
 
-    set user(value) {
+    set user(value: User) {
         this._user = value;
     }
 
@@ -32,7 +33,7 @@ export class AuthService {
     }
 
     public login(username, password) {
-        this.http.get('http://localhost:8080/projects/RESTAPI/login/' + username + '/' + password).subscribe((res) => {
+        this.http.get('http://localhost:8080/projects/RESTAPI/login/' + username + '/' + password).subscribe((res: User) => {
             if (res) {
                 this.authenticated = true;
                 this.user = res;
