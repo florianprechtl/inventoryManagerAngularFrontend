@@ -13,7 +13,9 @@
          data-target='#panelModalOpenEntry'
          id='inventory_item_preview_test'
          style='background-image:url(http://localhost:8080/projects/imgUpload/test.png)'>
-        <i class='btn btn-danger button-remove' id='button_remove_test'>X</i>
+        <a class='btn btn-danger button-remove' id='button_remove_test' (click)="deleteEntry($event, entry.InventoryEntryNr)">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </a>
         {{entry.Name}}
     </div>
 </div>

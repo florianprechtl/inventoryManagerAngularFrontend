@@ -1,3 +1,34 @@
-.nav-active {
+.btn{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: 0.1s ease-in;
+}
 
+.btn-swipe-right:hover {
+    color: #fff;
+}
+
+.btn:hover {
+    color: #FFFFFF !important;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.2s ease-in;
+}
+.btn-swipe-right::before {
+    top: 0;
+}
+
+.btn-swipe-right:hover::before{
+    width: 160px;
+    color: #FFFFFF;
 }

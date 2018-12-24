@@ -52,14 +52,15 @@
 }
 
 .button-search {
-    background-color: #031D54;
-    color: #B1C7F5;
+    background-color: #031D54 !important;
+    color: #B1C7F5 !important;
+    border-radius: 0 5px 5px 0 !important;
     height: 38px;
     transition: 0.2s;
 }
 
 .button-search:hover {
-    background-color: #B1C7F5;
-    color: #031D54;
+    background-color: #B1C7F5 !important;
+    color: #031D54 !important;
     height: 38px;
 }

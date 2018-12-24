@@ -63,3 +63,7 @@
 .icon-container div:last-child {
     margin-right: 0;
 }
+
+.button-remove {
+    border-radius: 5px 0 25px 0;
+}

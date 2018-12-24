@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {DataService} from '../../services/data.service';
 import {Inventoryentry} from '../../classes/inventoryentry.class';
 import {Inventory} from '../../classes/inventory.class';
+import {catchError} from 'rxjs/operators';
 
 @Component({
     selector: 'app-inventory-show-case',
@@ -35,7 +36,9 @@ export class InventoryShowCaseComponent implements OnInit {
             this.searchInventoryEntry(this.currentInventoryNr, value);
         } else {
             this._searchEntry = value;
-            this.loadInventory(this.currentInventoryNr);
+            if (this.currentInventoryNr) {
+                this.loadInventory(this.currentInventoryNr);
+            }
         }
     }
 
@@ -50,8 +53,8 @@ export class InventoryShowCaseComponent implements OnInit {
     ngOnInit() {
     }
 
-    loadInventory(inventoryNr: number) {
-        this.data.getInventoryEntries(inventoryNr).subscribe((res: Inventoryentry[]) => {
+    loadInventory() {
+        this.data.getInventoryEntries(this.currentInventoryNr).subscribe((res: Inventoryentry[]) => {
             this.inventoryEntries = res;
             console.log(res);
         });
@@ -61,6 +64,15 @@ export class InventoryShowCaseComponent implements OnInit {
         this.data.searchInventoryEntries(inventoryNr, searchEntry).subscribe((res: Inventoryentry[]) => {
             this.inventoryEntries = res;
         });
+    }
+
+    deleteEntry(event, inventoryEntryNr) {
+        event.stopPropagation();
+        this.data.deleteInventoryEntry(inventoryEntryNr).subscribe(
+            () => console.log('deletion successful'),
+            () => alert('deletion error'),
+            () => this.loadInventory()
+        );
     }
 
 }
