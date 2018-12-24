@@ -29,6 +29,6 @@
 }
 
 .btn-swipe-right:hover::before{
-    width: 160px;
+    width: 100%;
     color: #FFFFFF;
 }
