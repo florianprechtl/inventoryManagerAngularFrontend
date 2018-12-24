@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from '../services/data.service';
+import {Inventory} from '../classes/inventory.class';
 
 @Component({
     selector: 'app-inventory',
@@ -9,13 +10,13 @@ import {DataService} from '../services/data.service';
 export class InventoryComponent implements OnInit {
 
     public currentInventory;
-    public inventories;
+    public inventories: Inventory[];
 
     constructor(private dataService: DataService) {
     }
 
     ngOnInit() {
-        this.dataService.getAllInventories().subscribe((res) => {
+        this.dataService.getAllInventories().subscribe((res: Inventory[]) => {
             this.inventories = res;
             if (this.inventories.length > 0) {
                 this.currentInventory = this.inventories[0].InventoryNr;
@@ -23,6 +24,10 @@ export class InventoryComponent implements OnInit {
                 this.currentInventory = null;
             }
         });
+    }
+
+    onInventorySelect(inventoryNr: number) {
+        this.currentInventory = inventoryNr;
     }
 
 }

@@ -7,8 +7,8 @@
 
             <div class="input-group">
 
-                <select class="form-control" name="inventory" id="inventorySelect">
-                    <option *ngFor="let inventory of inventories">{{inventory.Name}}</option>
+                <select class="form-control" name="inventory" id="inventorySelect" (change)="onChange($event)" #inventorySelect>
+                    <option *ngFor="let inventory of inventories" value="{{inventory.InventoryNr}}">{{inventory.Name}}</option>
                 </select>
 
                 <div class="input-group-btn">

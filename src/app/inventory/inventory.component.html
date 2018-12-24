@@ -1,4 +1,4 @@
-<app-inventory-top-bar [inventories]="inventories"></app-inventory-top-bar>
+<app-inventory-top-bar (onInventorySelect)="onInventorySelect($event)" [inventories]="inventories"></app-inventory-top-bar>
 <app-inventory-show-case [currentInventory]="currentInventory"></app-inventory-show-case>
 <app-my-modal modalId="panelModalAddEntry">Add new Entry</app-my-modal>
 <app-my-modal modalId="panelModalOpenEntry">Update and show Entry</app-my-modal>
