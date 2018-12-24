@@ -15,4 +15,12 @@ export class DataService {
     public getIventory(inventoryNr) {
         return this.http.get('http://localhost:8080/projects/RESTAPI/inventory/' + inventoryNr);
     }
+
+    getInventoryEntries(inventoryNr) {
+        return this.http.get('http://localhost:8080/projects/RESTAPI/currentinventoryentry/' + inventoryNr);
+    }
+
+    searchInventoryEntries(inventoryNr, searchEntry) {
+        return this.http.get('http://localhost:8080/projects/RESTAPI/search/' + inventoryNr + '/' + searchEntry);
+    }
 }

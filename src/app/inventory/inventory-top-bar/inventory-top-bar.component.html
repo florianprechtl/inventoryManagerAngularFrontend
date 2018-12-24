@@ -1,20 +1,28 @@
-<div class="row justify-content-between mt-3">
+<div class="row justify-content-between mt-3" [formGroup]="topBarForm">
     <!-- Left side - inventory select -->
     <div class="col-lg-5 col-sm-6 ">
         <div class="form-group">
             <label for="inventorySelect">Select Inventory:</label>
-
-
             <div class="input-group">
-
-                <select class="form-control" name="inventory" id="inventorySelect" (change)="onChange($event)" #inventorySelect>
-                    <option *ngFor="let inventory of inventories" value="{{inventory.InventoryNr}}">{{inventory.Name}}</option>
+                <select class="form-control"
+                        name="inventory" id="inventorySelect"
+                        (change)="onChange($event)"
+                        formControName="inventorySelect"
+                        #inventorySelect>
+                    <option *ngFor="let inventory of inventories"
+                            value="{{inventory.InventoryNr}}">
+                        {{inventory.Name}}
+                    </option>
                 </select>
-
                 <div class="input-group-btn">
-                    <div class="btn-group search-button" role="group">
-                        <button type="button" class="btn button-search" data-toggle='modal'
-                                data-target='#add_inventory_modal'><i class="fas fa-plus"></i></button>
+                    <div class="btn-group search-button"
+                         role="group">
+                        <button type="button"
+                                class="btn button-search"
+                                data-toggle='modal'
+                                data-target='#add_inventory_modal'>
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -25,11 +33,17 @@
     <div class="col-lg-5 col-sm-6">
         <label for="search_entry">Search for specific entries:</label>
         <div class="input-group">
-            <input type="text" class="form-control" name="search_entry" id="search_entry"
-                   placeholder="Search for ..."/>
+            <input type="text"
+                   class="form-control"
+                   id="search_entry"
+                   placeholder="Search for ..."
+                   formControlName="searchEntry" #searchFor/>
             <div class="input-group-btn">
-                <div class="btn-group search-button" role="group">
-                    <button type="submit" name="search" id="search_button" class="btn button-search" value="search">
+                <div class="btn-group search-button"
+                     role="group">
+                    <button id="search_button"
+                            class="btn button-search"
+                            (click)="searchEntry(searchFor)">
                         <i class="fas fa-search"></i></button>
                 </div>
             </div>

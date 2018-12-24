@@ -11,6 +11,7 @@ export class InventoryComponent implements OnInit {
 
     public currentInventoryNr: number;
     public inventories: Inventory[];
+    public searchEntry: string;
 
     constructor(private dataService: DataService) {
     }
@@ -26,8 +27,13 @@ export class InventoryComponent implements OnInit {
         });
     }
 
-    onInventorySelect(inventoryNr: number) {
+    inventorySelect(inventoryNr: number) {
+        this.searchEntry = null;
         this.currentInventoryNr = inventoryNr;
+    }
+
+    inventorySearch(searchEntry: string) {
+        this.searchEntry = searchEntry;
     }
 
 }

@@ -8,4 +8,5 @@ export class Inventoryentry {
     public BuyingDate: string;
     public ExpiringDate: string;
     public Status: number;
+    public Name: string;
 }

@@ -17,6 +17,7 @@ import { InventoryShowCaseComponent } from './inventory/inventory-show-case/inve
 import { InventoryTopBarComponent } from './inventory/inventory-top-bar/inventory-top-bar.component';
 import { InventoryEntryPanelComponent } from './inventory/inventory-show-case/inventory-entry-panel/inventory-entry-panel.component';
 import {DataService} from './services/data.service';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
@@ -43,6 +44,7 @@ const appRoutes: Routes = [
     imports: [
         BrowserModule,
         HttpClientModule,
+        ReactiveFormsModule,
         RouterModule.forRoot(
             appRoutes,
             {enableTracing: false} // <-- debugging purposes only
