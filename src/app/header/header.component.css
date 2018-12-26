@@ -2,7 +2,7 @@
     box-shadow: #001B20 0 0 15px 0;
 }
 
-.btn-menu-collapse  {
+.btn-menu-collapse {
 }
 
 .btn-menu-collapse:hover {
@@ -10,7 +10,6 @@
     color: #FFFFFF !important;
     background-color: transparent !important;
 }
-
 
 .collapse-down:before {
     content: '';

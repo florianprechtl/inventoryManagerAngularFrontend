@@ -1,6 +1,6 @@
 import {Component, ViewChild, Input, OnInit, ElementRef, EventEmitter, Output} from '@angular/core';
 import {Inventory} from '../../classes/inventory.class';
-import { FormControl, FormGroup } from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
     selector: 'app-inventory-top-bar',
@@ -34,7 +34,7 @@ export class InventoryTopBarComponent implements OnInit {
     }
 
     searchEntry(event) {
-            this.onSearchEntry.emit(event.value);
+        this.onSearchEntry.emit(event.value);
     }
 }
 

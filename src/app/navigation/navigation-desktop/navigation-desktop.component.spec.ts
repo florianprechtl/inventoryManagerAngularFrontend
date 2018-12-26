@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {InventoryEntryPanelComponent} from './inventory-entry-panel.component';
+import {NavigationDesktopComponent} from './navigation-desktop.component';
 
-describe('InventoryEntryPanelComponent', () => {
-    let component: InventoryEntryPanelComponent;
-    let fixture: ComponentFixture<InventoryEntryPanelComponent>;
+describe('NavigationDesktopComponent', () => {
+    let component: NavigationDesktopComponent;
+    let fixture: ComponentFixture<NavigationDesktopComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [InventoryEntryPanelComponent]
+            declarations: [NavigationDesktopComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(InventoryEntryPanelComponent);
+        fixture = TestBed.createComponent(NavigationDesktopComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -1,4 +1,4 @@
-.btn{
+.btn {
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -16,7 +16,7 @@
     color: #FCFEFF !important;
 }
 
-.btn::before{
+.btn::before {
     content: "";
     position: absolute;
     left: 0;
@@ -26,11 +26,12 @@
     z-index: -1;
     transition: 0.2s ease-in;
 }
+
 .btn-swipe-right::before {
     top: 0;
 }
 
-.btn-swipe-right:hover::before{
+.btn-swipe-right:hover::before {
     width: 100%;
     color: #FCFEFF;
 }
