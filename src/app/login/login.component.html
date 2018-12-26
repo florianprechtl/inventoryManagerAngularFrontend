@@ -2,22 +2,29 @@
 <form [formGroup]="loginForm" (submit)="loginUser($event)">
 
     <!-- Username -->
-    <div class="input-group mb-3 mt-3 col-lg-5">
-        <div class="input-group-prepend">
-            <span class="input-group-text">Username</span>
+    <div class="row">
+        <div class="input-group mb-3 mt-3 col-lg-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Username</span>
+            </div>
+            <input type="text" class="form-control" id="username" formControlName="username">
         </div>
-        <input type="text" class="form-control" id="username" formControlName="username">
     </div>
 
     <!-- Password -->
-    <div class="input-group mb-3 col-lg-5">
-        <div class="input-group-prepend">
-            <span class="input-group-text">Password</span>
+    <div class="row">
+        <div class="input-group mb-3 col-lg-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Password</span>
+            </div>
+            <input type="password" class="form-control" id="password" formControlName="password">
         </div>
-        <input type="password" class="form-control" id="password" formControlName="password">
     </div>
-    <div class="col-lg-5">
-        <button type="submit" class="btn btn-primary btn-md btn-block mr-3">Login</button>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <button type="submit" class="btn btn-primary btn-md btn-block mr-3">Login</button>
+        </div>
     </div>
 
 </form>
