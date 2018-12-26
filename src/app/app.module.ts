@@ -20,6 +20,7 @@ import {DataService} from './services/data.service';
 import {ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
     {path: 'inventory', component: InventoryComponent},
     {path: 'admin', component: AdminComponent},

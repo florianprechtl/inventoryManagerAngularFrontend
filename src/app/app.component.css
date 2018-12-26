@@ -14,7 +14,10 @@ h1{
 }
 
 #navigationPanel {
-    border-right: #F22E00 solid 5px;
-    border-bottom: #F22E00 solid 5px;
+    box-shadow: #001B20 0 0 15px 0;
     height: 100%;
+}
+
+.sticky-offset-70 {
+    top: 70px;
 }

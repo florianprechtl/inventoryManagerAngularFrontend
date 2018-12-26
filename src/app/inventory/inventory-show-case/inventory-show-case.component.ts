@@ -21,7 +21,7 @@ export class InventoryShowCaseComponent implements OnInit {
     set currentInventoryNr(value: number) {
         if (value) {
             this._currentInventoryNr = value;
-            this.loadInventory(value);
+            this.loadInventory();
         }
     }
 
@@ -37,7 +37,7 @@ export class InventoryShowCaseComponent implements OnInit {
         } else {
             this._searchEntry = value;
             if (this.currentInventoryNr) {
-                this.loadInventory(this.currentInventoryNr);
+                this.loadInventory();
             }
         }
     }

@@ -9,7 +9,7 @@ import {NavigationEnd, Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
 
     public title;
-    public menueCollapsed = false;
+    public menuCollapsed = false;
 
     constructor(private router: Router) {
     }
@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
     }
 
     public toggleButtonDisplay() {
-        this.menueCollapsed = !this.menueCollapsed;
+        this.menuCollapsed = !this.menuCollapsed;
     }
 
 

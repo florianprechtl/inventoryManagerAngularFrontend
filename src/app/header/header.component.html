@@ -1,17 +1,17 @@
-<div class="sticky header background-1">
+<div class="sticky header background-1 real-header">
     <div class="d-block d-sm-none">
-        <a *ngIf="!menueCollapsed" class="btn btn-primary position-absolute m-2 background-4 color-1"
+        <a *ngIf="!menuCollapsed" class="btn btn-menu-collapse collapse-down position-absolute m-2 background-4 color-1"
            data-toggle="collapse" data-target="#menueCollapse"
            (click)="toggleButtonDisplay()"
            role="button"><i class="fas fa-chevron-down"></i></a>
-        <a *ngIf="menueCollapsed" class="btn btn-primary position-absolute m-2 background-4 color-1"
+        <a *ngIf="menuCollapsed" class="btn btn-menu-collapse collapse-up position-absolute m-2 background-4 color-1"
            data-toggle="collapse" data-target="#menueCollapse"
            (click)="toggleButtonDisplay()"
            role="button"><i class="fas fa-chevron-up"></i></a>
     </div>
     <h1 class="color-4" align="center">{{title}}</h1>
 </div>
-<div class="header background-1">
+<div class="header background-1 placeholder">
     <div class="d-block">
         <h1 class="color-4" align="center">Placeholder</h1>
         <div class="collapse d-sm-none" id="menueCollapse">
