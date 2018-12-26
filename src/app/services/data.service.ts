@@ -1,14 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {catchError} from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import {Inventory} from '../classes/inventory.class';
-import {Inventoryentry} from '../classes/inventoryentry.class';
 
 @Injectable()
 export class DataService {
-
-    private headers = new Headers({ 'Content-Type': 'application/json'});
 
     constructor(private http: HttpClient) {
     }

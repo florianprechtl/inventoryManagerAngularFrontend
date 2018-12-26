@@ -13,11 +13,6 @@ h1{
     background-color: green;
 }
 
-#navigationPanel {
-    box-shadow: #001B20 0 0 15px 0;
-    height: 100%;
-}
-
 .sticky-offset-70 {
     top: 70px;
 }
