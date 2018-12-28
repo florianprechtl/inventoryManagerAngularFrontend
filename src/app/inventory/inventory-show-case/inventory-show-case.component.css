@@ -1,6 +1,6 @@
-.inventory-item-preview {
+.inventory-item-preview, .add-inventory-entry-button {
     margin: 15px;
-    background-color: #B1C7F5;
+    background-color: #001B20;
     border-radius: 5px;
     min-height: 140px;
     min-width: 140px;
@@ -8,19 +8,23 @@
     background-size: cover;
 }
 
-.inventory-item-preview:hover {
-    box-shadow: inset black 0 0 5px 0;
+.inventory-item-preview:before {
+    content: "";
+    background-image: url('http://localhost:8080/projects/imgUpload/test.png');
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
 }
 
-.add-inventory-entry-button {
-    background-color: #031D54;
-    color: #B1C7F5;
-    transition: 0.2s;
+.inventory-item-preview:hover:before {
+    height: 0;
 }
 
-.add-inventory-entry-button:hover {
-    background-color: #B1C7F5;
-    color: #031D54;
+.add-entry-icon {
+    color: inherit;
 }
 
 .icon-box {
@@ -28,7 +32,8 @@
     width: 4em;
     height: 4em;
     margin-right: 1em;
-    background-color: #031D54;
+    background-color: #02B1D2;
+    color: #001B20;
     text-align: center;
 }
 
@@ -48,10 +53,29 @@
     vertical-align: middle;
 }
 
+.icon-box:hover {
+    background-color: #001B20;
+    color: #FFFFFF;
+}
+
 .icon-container div:last-child {
     margin-right: 0;
 }
 
 .button-remove {
     border-radius: 5px 0 25px 0;
+    float: left;
+    padding-left: 10px;
+}
+
+.button-edit {
+    border-radius: 0 5px 0 25px;
+    float: right;
+    padding-right: 5px;
+}
+
+.panel-caption {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
 }

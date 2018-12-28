@@ -18,6 +18,8 @@ import {InventoryTopBarComponent} from './inventory/inventory-top-bar/inventory-
 import {InventoryEntryPanelComponent} from './inventory/inventory-show-case/inventory-entry-panel/inventory-entry-panel.component';
 import {DataService} from './services/data.service';
 import {ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -46,10 +48,12 @@ const appRoutes: Routes = [
         BrowserModule,
         HttpClientModule,
         ReactiveFormsModule,
+        DragDropModule,
         RouterModule.forRoot(
             appRoutes,
             {enableTracing: false} // <-- debugging purposes only
-        )
+        ),
+        BrowserAnimationsModule
     ],
     providers: [AuthService, DataService],
     bootstrap: [AppComponent]

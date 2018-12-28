@@ -30,6 +30,9 @@ export class HeaderComponent implements OnInit {
                     case '/admin':
                         this.title = 'MyFridge - Admin';
                         break;
+                    default:
+                        this.title = 'MyFrigde - Home';
+                        break;
                 }
             }
         });
