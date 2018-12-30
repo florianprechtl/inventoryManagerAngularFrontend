@@ -1,10 +1,17 @@
 <div class="sticky-top bg-white sticky-offset" style="z-index: 2; padding-top: 15px">
-    <app-inventory-top-bar (onSearchEntry)="inventorySearch($event)" (onInventorySelect)="inventorySelect($event)"
-                           [inventories]="inventories"></app-inventory-top-bar>
+    <app-inventory-top-bar (onSearchEntry)="inventorySearch($event)"
+                           (onInventorySelect)="inventorySelect($event)"
+                           [inventories]="inventories">
+    </app-inventory-top-bar>
 </div>
+
 <app-inventory-show-case [currentInventoryNr]="currentInventoryNr"
-                         [searchEntry]="searchEntry"></app-inventory-show-case>
-<app-my-modal modalId="panelModalAddEntry">Add new Entry</app-my-modal>
+                         [searchEntry]="searchEntry">
+</app-inventory-show-case>
+
+<app-my-modal modalId="panelModalAddEntry">
+    <app-modal-add-new-entry></app-modal-add-new-entry>
+</app-my-modal>
 <app-my-modal modalId="panelModalOpenEntry">Update and show Entry</app-my-modal>
 
 

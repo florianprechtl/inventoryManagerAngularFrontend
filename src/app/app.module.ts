@@ -18,8 +18,9 @@ import {InventoryTopBarComponent} from './inventory/inventory-top-bar/inventory-
 import {InventoryEntryPanelComponent} from './inventory/inventory-show-case/inventory-entry-panel/inventory-entry-panel.component';
 import {DataService} from './services/data.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {ModalAddNewEntryComponent} from './inventory/modal-add-new-entry/modal-add-new-entry.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
         NavigationMobileComponent,
         InventoryShowCaseComponent,
         InventoryTopBarComponent,
-        InventoryEntryPanelComponent
+        InventoryEntryPanelComponent,
+        ModalAddNewEntryComponent
     ],
     imports: [
         BrowserModule,
