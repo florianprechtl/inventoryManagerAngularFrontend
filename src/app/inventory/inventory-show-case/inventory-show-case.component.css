@@ -1,6 +1,6 @@
-.inventory-item-preview, .add-inventory-entry-button {
+.add-inventory-entry-button {
     margin: 15px;
-    background-color: #001B20;
+    background-color: #001B20 !important;
     border-radius: 5px;
     min-height: 140px;
     min-width: 140px;
@@ -8,19 +8,8 @@
     background-size: cover;
 }
 
-.inventory-item-preview:before {
-    content: "";
-    background-image: url('http://localhost:8080/projects/imgUpload/test.png');
-    background-size: 140px 140px;
-    width: 140px;
-    height: 140px;
-    border-radius: 5px;
-    position: absolute;
-    transition: 0.2s ease-in-out;
-}
-
-.inventory-item-preview:hover:before {
-    height: 0;
+.add-inventory-entry-button:hover {
+    background-color: #001B20 !important;
 }
 
 .add-entry-icon {
@@ -32,8 +21,8 @@
     width: 4em;
     height: 4em;
     margin-right: 1em;
-    background-color: #02B1D2;
-    color: #001B20;
+    background-color: #02B1D2 !important;
+    color: #001B20 !important;
     text-align: center;
 }
 
@@ -62,20 +51,7 @@
     margin-right: 0;
 }
 
-.button-remove {
-    border-radius: 5px 0 25px 0;
-    float: left;
-    padding-left: 10px;
-}
-
-.button-edit {
-    border-radius: 0 5px 0 25px;
-    float: right;
-    padding-right: 5px;
-}
-
-.panel-caption {
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 14px;
+.example-box {
+    min-height: 140px;
+    background-color: #cccccc;
 }

@@ -1,3 +1,15 @@
-<p>
-    inventory-entry-panel works!
-</p>
+<div class="example-box inventory-item-preview">
+    <a class='btn btn-danger button-remove'
+       (click)="deleteEntry($event, entry.InventoryEntryNr)">
+        <i class="fas fa-times" aria-hidden="true"></i>
+    </a>
+
+    <a class='btn btn-primary button-edit'
+       data-toggle='modal'
+       data-target='#panelModalOpenEntry'>
+        <i class="fas fa-edit" aria-hidden="true"></i>
+    </a>
+    <p class="panel-caption">
+        {{entry.Name}}
+    </p>
+</div>

@@ -1,0 +1,50 @@
+.button-remove {
+    border-radius: 5px 0 25px 0;
+    float: left;
+    padding-left: 10px;
+}
+
+.button-edit {
+    border-radius: 0 5px 0 25px;
+    float: right;
+    padding-right: 5px;
+}
+
+.panel-caption {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+.cdk-drag-animating {
+    transition: 250ms ease-in-out;
+}
+
+.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: 250ms ease-in-out;
+}
+
+.inventory-item-preview {
+    margin: 15px;
+    background-color: #001B20 !important;
+    border-radius: 5px;
+    min-height: 140px;
+    min-width: 140px;
+    box-shadow: black 0 0 5px 0;
+    background-size: cover;
+}
+
+.inventory-item-preview:before {
+    content: "";
+    background-image: url('http://localhost:8080/projects/imgUpload/test.png');
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.inventory-item-preview:hover:before {
+    height: 0;
+}

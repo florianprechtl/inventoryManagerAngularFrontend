@@ -1,2 +1,35 @@
-<p *ngFor="let product of products">{{product['ProdNr']}}</p>
+<a class="btn btn-primary" (click)="startSound()">start Sound</a>
+<a class="btn btn-secondary ml-3" (click)="stopSound()">stop Sound</a>
+
+<div class="form-group mt-3">
+    <select [(ngModel)]="oscillatorType">
+        <option selected value="sawtooth">Saw</option>
+        <option value="sine">Sine</option>
+        <option value="triangle">Triangle</option>
+    </select>
+
+    <select class="ml-3" [(ngModel)]="filterType">
+        <option selected value="lowpass">Lowpass</option>
+        <option value="highpass">Highpass</option>
+        <option value="bandpass">Bandpass</option>
+    </select>
+</div>
+
+<div>
+    <label for="oscillatorFrequency">Oscillator Frequency</label>
+    <input [(ngModel)]="oscillatorFrequency" type="range" min="0" max="1000" id="oscillatorFrequency">
+</div>
+
+<div>
+    <label for="filterFrequency">Filter Frequency</label>
+    <input [(ngModel)]="filterFrequency" type="range" min="0" max="1000" id="filterFrequency">
+</div>
+
+<div>
+    <label for="filterGain">Filter Gain</label>
+    <input [(ngModel)]="filterGain" type="range" min="0" max="100" id="filterGain">
+</div>
+
+
+<!--<p *ngFor="let product of products">{{product['ProdNr']}}</p>-->
 
